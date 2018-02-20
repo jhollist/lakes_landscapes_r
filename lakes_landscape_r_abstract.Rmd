@@ -1,0 +1,42 @@
+---
+title: "Lakes, landscapes, and R: A framework for open research on freshwater cyanobacteria"
+author: |
+  - Jeffrey W. Hollister
+  - W. Bryan Milstead
+date: "December 4, 2017"
+output: word_document
+keywords: |
+  - cyanobacteria
+  - open science
+  - open source
+  - R language for statistical computing
+  - landscape limnology
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Abstract
+
+In the last several years scientific reproducibility has been a hot topic with 
+several fields openly struggling with reproducing and replicating research 
+results.  One of the key tools to address reproducibility is the use of open 
+source software.  Increasingly in ecology, the R language for statistical 
+computing is the open source software of choice for analysis and programming 
+tasks.  Our research group has also made the choice to invest in the use of R 
+for our work.  In this poster we share examples of how we use R to help build an
+open foundation for our work on understanding how water quality, landscapes, and 
+limnological processes interact to control cyanobacteria blooms. In particular 
+we discuss three R packages - `lakemorpho`, `elevatr`, and `goatscape` - that 
+we have developed to facilitate our research. The `lakemorpho` package provides
+the ability to more easily reproduce calculation of lake morphometry metrics.
+One of the data requirements for `lakemorpho` is access to elevation data. In 
+response to this need, we developed `elevatr` to provide access to digital 
+elevation models and point elevation estimates for anywhere in the world. 
+Lastly, we are developing `goatscape` to provide the ability to reproducibly 
+summarize key landscape metrics within an input landscape polygon. While these 
+tools have direct applications to landscape and limnological research, they are 
+more broadly conceived such that they can benefit the larger landscape ecology 
+community and help facilitate openness and reproducibility of a variety of 
+landscape ecological research efforts. 
