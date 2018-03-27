@@ -1,0 +1,5 @@
+system("git checkout gh-pages")
+rmarkdown::render("index.Rmd")
+system("phantomjs /usr/local/decktape-1.0.0/decktape.js index.html index.pdf")
+system("git add -A; git commit -m 'fresh render index'")
+system("git push origin gh-pages")

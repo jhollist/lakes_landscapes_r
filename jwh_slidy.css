@@ -1,0 +1,209 @@
+/*jwh Slidy Style Overrides: JW Hollister, April 2015*/
+/* All other styles and functions are from default slidy style in RStudio*/
+
+/*****************************************************************************/
+/* Title Slide
+/*****************************************************************************/
+div.slide h1.title {
+  color: #4A5B63;
+  font-size: 60pt;
+  text-align: left;
+  padding: 0px;
+  margin: 0px;
+}
+
+div.logo img {
+  width: 130px;
+  height: auto;
+  position: absolute;
+  top: 580px;
+  right: 30px;
+}
+
+div.coverpic img {
+  height: 400px;
+  width: auto;
+  position: absolute;
+  top: 270px;
+  left: 50px;
+}
+
+div.slide h1.subtitle {
+  color: #4A5B63;
+  font-size: 45pt;
+  text-align: left;
+  padding: 0px;
+  margin: 0px;
+}
+
+p.author {
+  color: #4A5B63;
+  font-size: 30pt;
+  text-align: left;
+  position: absolute;
+  top: 552px;
+  right: 0px;
+}
+
+p.date {
+  color: #4A5B63;
+  font-size: 23pt;
+  text-align: left;
+  position: absolute;
+  top: 652px;
+  right: 7px;
+}
+
+p.twitter {
+  color: #4A5B63;
+  font-size: 30pt;
+  text-align: left;
+  position: absolute;
+  top: 599px;
+  right: 0px;
+}
+
+
+/*****************************************************************************/
+/* General Slides
+/*****************************************************************************/
+div h1 {
+  color: #559B6A;
+  font-size: 30pt;
+}
+
+div.slide {
+  font-family: "Lucida Console";
+  font-size: 23pt;
+  padding-top: 50px;
+  padding-left: 50px;
+}
+
+/*****************************************************************************/
+/* Left Right
+/*****************************************************************************/
+
+div.left {
+  float: left;
+  width: 400px;
+  height: auto;
+  position: absolute;
+  left: 50px;
+  top: 150px;
+  margin: 0;
+  padding: 0;
+}
+
+div.right {
+  float: right;
+  width: 400px;
+  height: auto;
+  position: absolute;
+  left: 733px;
+  top: 150px;
+  margin: 0;
+  padding: 0;
+}
+
+/*****************************************************************************/
+/* Segue Slides both .segue-img and .segue-txt
+/*****************************************************************************/
+div.segue-img  h1 {
+  color: white;
+  font-size: 60pt;
+  font-weight: bold;
+  position: absolute;
+  margin-top: 230px;
+  margin-left: 10%;
+}
+
+div.segue-img img {
+  
+  /* Set rules to fill background */
+  min-height: 768px;
+  min-width: 1366px;
+	
+  /* Kill padding */
+  margin: 0px;
+  padding: 0px;
+  
+}
+
+div.segue-img p {
+  margin: 0px;
+  padding: 0px;
+}
+
+div.segue-img {
+  padding: 0px;
+}
+
+div.segue-txt  h1 {
+  font-size: 90pt;
+  font-weight: bold;
+  position: absolute;
+  top: 230px;
+  left: 130px;
+  text-shadow: 3px 3px #E3E9F0;
+  color: #2E3B48;
+}
+
+div.segue-txt {
+  /*background: -webkit-linear-gradient(#356595,#4A5B63); /* For Safari 5.1 to 6.0 */
+  /*background: -o-linear-gradient(#356595,#4A5B63); /* For Opera 11.1 to 12.0 */
+  /*background: -moz-linear-gradient(#356595,#4A5B63); /* For Firefox 3.6 to 15 */
+  /*background: linear-gradient(#356595,#4A5B63); /* Standard syntax */
+  background-color: #808C92;
+}
+
+/*****************************************************************************/
+/* Tables
+/*****************************************************************************/
+/* Table Style */
+/* borders */
+table thead {
+  border-top: 1px solid #4a5b63;
+  border-bottom: 1px solid #4a5b63;
+}
+
+table td {
+  border-bottom: 1px solid #4a5b63;
+}
+
+/* Header Background and Font colors*/
+table th {
+  background: #4a5b63;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* Row Alternating Color eff3f4*/
+table tr:nth-child(2n+1) {
+  background: #b6b8ba;
+}
+
+/* Table Font */
+table tr > td:first-child {
+  font-weight: 600;
+  color: #4a5b63;
+}
+
+/*****************************************************************************/
+/* image right
+/*****************************************************************************/
+
+div.img-right img {
+  position: absolute; 
+  top: 76px; 
+  left: 680px;
+}
+
+/*****************************************************************************/
+/* image left
+/*****************************************************************************/
+
+div.img-left img {
+  top: 76px; 
+  left: 14px;
+}
