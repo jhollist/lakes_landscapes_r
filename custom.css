@@ -25,3 +25,15 @@ a {
     background-color: #205493;
 }
 
+.title-slide {
+  background-image: url("slideMasterSample.png");
+  background-size: cover;
+}
+.title-slide h1, h2, h3 {
+  text-align: center;
+  color: #F7F8FA;
+}
+
+.title-slide .remark-slide-number {
+  display: none;
+}
