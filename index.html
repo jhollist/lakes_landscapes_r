@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>An Open Science Framework for Research on Cyanobacteria in Lakes and Ponds</title>
+    <title>Lakes, Landscapes, and R: : A framework for open research on freshwater cyanobacteria</title>
     <meta charset="utf-8">
-    <meta name="author" content="Jeff Hollister, Farnaz Nojavan, Betty Kreakie, Stephen Shivers, and Bryan Milstead" />
+    <meta name="author" content="Jeff Hollister and Bryan Milstead" />
+    <meta name="date" content="2018-04-11" />
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link rel="stylesheet" href="custom.css" type="text/css" />
   </head>
@@ -11,11 +12,11 @@
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
-# An Open Science Framework for Research on Cyanobacteria in Lakes and Ponds
-## US EPA, Region 7
-### Jeff Hollister, Farnaz Nojavan, Betty Kreakie, Stephen Shivers, and Bryan Milstead
-### <div style="white-space: pre-line;">2017-10-11
-Lenexa, KS</div>
+# Lakes, Landscapes, and R: : A framework for open research on freshwater cyanobacteria
+## <div style="white-space: pre-line;">“US-IALE 2018”
+Chicago, IL</div>
+### Jeff Hollister and Bryan Milstead
+### 2018-04-11
 
 ---
 
@@ -26,9 +27,9 @@ class: center, middle, inverse
 # Twitter?
 
 
-![Yes!!!](http://www.reactiongifs.us/wp-content/uploads/2014/11/thumbs_up_waynes_world.gif)
+![Yes!!!](https://media1.giphy.com/media/kvBzgZMqOLwiY/200w.webp)
 
-### hashtag: \#cyanobacteria
+### hashtag: \#usiale2018 \#rstats \#cyanobacteria 
 ### me: @jhollist
 
 
@@ -71,55 +72,6 @@ class: center, middle, inverse
 ![The workflow](figure/cyano_model_function.jpg)
 
 
-
----
-
-# What is open science? 
-
-- Access to materials     
-- Reproducible/ Repeatable    
-- The Web!                   
-- A process, not a state                       
-
-&lt;img src="figure/open_sign_4344960203_821cb56ec9_o_resize.jpg" style="height: 80%; width: 80%; margin-left: 100px"&gt;&lt;/img&gt;
-
-
----
-
-# Why open science?
-
-
-- Often required
-  - Government/Funders/Journals
-- Benefits researchers
-  - [Mciernan et al. (2016) How open science helps researchers succeed](https://elifesciences.org/content/5/e16800)
-- Improves quality
-  - [The classic example: Reinhart and Rogoff](http://www.newyorker.com/news/john-cassidy/the-reinhart-and-rogoff-controversy-a-summing-up)
-- Benefits to society
-  - ["Sharing of Data Leads to Progress on Alzheimerâ€™s"](http://www.nytimes.com/2010/08/13/health/research/13alzheimer.html)
-
-&lt;img src="https://media.giphy.com/media/1M9fmo1WAFVK0/giphy.gif" style="width: 60%; height: 60%; margin-left: 20%;"&gt;&lt;/img&gt;
-
-
----
-
-# How are we open?
-
-.left-column[
-
-- R package development
-    - Research compendia
-    - Tooling for common problems
-- Visualization
-- Sharing and collaborating
-- Publishing
-- Apply to our research efforts 
-]
-
-.right-column[
-&lt;img src = "https://media.giphy.com/media/l0MYyv6UK0Bd4DE76/giphy.gif" style="width: 110%; height: 110%; margin-top: 50px;"&gt;&lt;/img&gt;
-]
-
 ---
 class: center, middle, inverse
 
@@ -136,43 +88,6 @@ class: center, middle, inverse
 - We are an R shop!
 
 &lt;img src="https://media.giphy.com/media/l2JhtKtDWYNKdRpoA/giphy.gif" style="width: 80%; height: 80%; margin-left: 10%;"&gt;&lt;/img&gt;
-
----
-# Research Compendia
-
-.left-column[
-- Define
-- Origins
-  - [Gentleman and Lang (2004)](http://biostats.bepress.com/bioconductor/paper2)
-- Part of
-  - Reproducible Research
-  - Literate Programming (ala Donald Knuth)
-- ROpenSci efforts
-  - [rrrpkg](https://github.com/ropensci/rrrpkg)
-  - [ROpenSci unconf 2017 discussion](https://github.com/ropensci/unconf17/issues/5)
-]
-
-.right-column[
-
-&lt;img src="http://www.dlib.org/dlib/january17/nuest/nuest-fig1.png" style="margin-left: 75px"&gt;&lt;/img&gt;
-
-from NÃ¼st, Konkol, et al (2017), https://doi.org/10.1045/january2017-nuest
-]
-
----
-
-# Packages as Research Compendia
-- R, Data, and Vignettes folders
-- Other examples  
-    - [Carl Boettiger's template](https://github.com/cboettig/template)
-    - [Ben Marwick](https://github.com/benmarwick/Pleistocene-aged-stone-artefacts-from-Jerimalai--East-Timor)
-- Our examples
-    - https://github.com/usepa/LakeTrophicModelling
-    - https://github.com/usepa/Microcystinchla)
-- GitHub and Zenodo (Archive)
-
-![ghz](ghz.jpg)
-
 ---
 
 # Packages to solve common problems
@@ -203,8 +118,6 @@ from NÃ¼st, Konkol, et al (2017), https://doi.org/10.1045/january2017-nuest
 .right-column[
 ![lakemorpho](figure/lakemorpho.png)
 ]
-
-
 
 ---
 class: center, middle
@@ -268,277 +181,6 @@ background-position: 50% 50%
 .right-column[
 &lt;img src="figure/goatscape_logo.jpg" style="width: 90%; height: 90%;"&gt;&lt;/img&gt;
 ]
----
-
-class: middle, center, inverse
-
-# Data Visualization
-
-
----
-
-# Shiny: Cyanobacteria Monitoring Collaborative
-
-.footnote[Project URL: &lt;http://cyanos.org&gt;]
-
-.left-column[
-- Started in 2013
-  - New England Region Cyanobacteria Monitoring Workgroup
-- Three Projects
-  - bloomWatch
-  - cyanoScope
-  - Monitoring
-- Data Viz with Shiny
-]
-
-.right-column[
-![cyano web](figure/cyano_web.jpg)
-]
-
-
----
-class: middle, center
-background-image: url("figure/shiny.jpg")
-
-# [Shiny: Demo](https://cyanos.shinyapps.io/cyanoviz/)
-
-
----
-class: middle, center, inverse
-
-#  Sharing and Collaborating
-
-
----
-
-# GitHub
-
-- What is it?
-- How do we use it?
-
-
-&lt;img src = "http://www.storybench.org/wp-content/uploads/2015/09/github-octocat.jpg" style="margin-left: 5%; margin-top: -20px; width: 700px;"&gt;&lt;/img&gt;
-
-
----
-class: middle, center
-background-image: url("figure/github_demo.jpg")
-
-# [GitHub: Demo](https://github.com/usepa)
-
-
----
-class: middle, center, inverse
-
-#  Open Access
-
-
----
-
-# Publishing
-
-- Preprints
-  - [Hollister *el al.* (2016) PeerJ Preprints](http://dx.doi.org/10.7287/peerj.preprints.1319v2)
-- Open first
-  - [Milstead *et al.* (2013) PLoS One](http://dx.doi.org/10.1371/journal.pone.0081457)
-  - [Hollister and Kreakie (2016) F1000Research](https://dx.doi.org/10.12688/f1000research.7955.2)
-- Money where our mouth(s) is(are)
-  - [Kreakie *et al.* (2015) LakeLines](http://www.nalms.org/media.acux/beb75c9c-f812-4753-b888-79864899c6d6)
-
-&lt;img src = "figure/oa_journals.jpg" style="margin-left: 15%; width: 500px;"&gt;&lt;/img&gt;
-
-
-
----
-class: middle, center, inverse
-
-#  Open Science Research
-
-
----
-
-# Models and field research
-
-- Random forest models of trophic state and chlorophyll *a*
-- Re-thinking the Lake Trophic State Index
-- Chlorophyll *a* and microcystin
-- Temporal and spatial dynamics of cyanobacteria blooms
-- New work
-    - Lake photic zone temperature
-    - Phytoplankton community analysis
-
-&lt;img src="https://media.giphy.com/media/qJsJI0MhazjGw/giphy.gif" style="width: 70%; height: 70%; margin-left: 10%;"&gt;&lt;/img&gt;
-
----
-
-# Random forest models of trophic state and chlorophyll *a*
-
-.left-column[
-- National 
-- Data
-    - National Lakes Assessment
-    - Land cover
-- `randomForest` package
-- Variable selection
-- All variables (water quality and GIS) 
-    - 68.7% Total Accuracy
-- GIS only variables 
-    - 49% Total Accuracy
-- But ...]
-
-.right-column[
-&lt;img src="figure/hollisterES15-00703R_fig11.jpg" style="width: 100%; height: 100%; margin-top: 50px;"&gt;&lt;/img&gt;
-]
-
----
-
-# Random forest models of trophic state and chlorophyll *a*
-
-- How is it open and reproducible?
-    - [GitHub](https://github.com/usepa/LakeTrophicModelling)
-    - [10.5281/zenodo.40271](http://dx.doi.org/10.5281/zenodo.40271)
-    - [PeerJ Pre-print](https://peerj.com/preprints/1319/)
-    - [Ecosphere (OA)](http://onlinelibrary.wiley.com/doi/10.1002/ecs2.1321/full)
-
-![ecosphere](figure/ecosphere.jpg)
----
-
-# Re-thinking the Lake Trophic State Index
-
-.left-column[
-- Led by Farnaz Nojavan
-- Hierarchical model
-  - Nitrogen and Phosphorus
-  - POLR: Revised Trophic State Index
-- Total Accuracy 
-  - 0.6
-- Balanced Accuracy
-  - 0.68 to 0.78
-]
-
-.right-column[
-&lt;img src="figure/dag-0.jpg" style="width: 100%; height: 100%; margin-top: 50px"&gt;&lt;/img&gt;
-]
-
----
-
-# Re-thinking the Lake Trophic State Index
-
-.left-column[
-- Hierarchical model
-  - Nitrogen and Phosphorus
-  - POLR: Revised Trophic State Index
-- Total Accuracy 
-  - 0.6
-- Balanced Accuracy
-  - 0.68 to 0.78
-]
-
-.right-column[
-![models](figure/predcit_acc-0.jpg)
-]
-
----
-
-# Re-thinking the Lake Trophic State Index
-
-- How is it open and reproducible?
-    - [GitHub](https://github.com/usepa/rethinking_tsi)
-    - [10.5281/zenodo.556175](https://doi.org/10.5281/zenodo.556175)
-    - OA (when published)
-  
-![ecol_model](figure/ecol_model.jpg)
----
-
-# Chlorophyll *a* and microcystin
-
-.left-column[
-- National
-- Diagnostic tool
-- Probability
-    - Exceeding microcystin advisory
-    - Given chlorophyll *a* concentration
-]
-
-.right-column[
-&lt;img src="https://f1000researchdata.s3.amazonaws.com/manuscripts/9675/6edf7059-7b8a-43c8-8488-a06c5f761572_figure1.gif"  style="width: 120%; height: 120%; margin-top: 50px;"&gt;&lt;/img&gt;
-]
-
----
-
-# Chlorophyll *a* and microcystin
-
-- The numbers!
-
-![mcyst_table](figure/mcys_table.jpg)
-
----
-
-# Chlorophyll *a* and microcystin
-
-- How is it open?
-    - [GitHub](https://github.com/usepa/microcystinchla)
-    - [Zenodo](http://dx.doi.org/10.5281/zenodo.55273)
-    - [F1000Research](https://f1000research.com/articles/5-151/v2)
-        - Pre-print and peer-reviewed in one!
-
-![f1000](figure/f1000.jpg)
-
----
-
-# Temporal and spatial dynamics of cyanobacteria blooms
-
-- Led by Stephen Shivers
-- Rhode Island
-- Field effort
-- 2 ponds
-    - Yawgoo Pond (the nice wooded site)
-    - Warwick Pond (gritty and (somewhat) urban site)
-- Twice weekly
-- Seven sampling locations in each
-
-&lt;img src="figure/yawg_warw.png" style="width: 83%; margin-top: -2%; margin-left: 10%;"&gt;&lt;/img&gt;
-
----
-
-# Temporal and spatial dynamics of cyanobacteria blooms
-
-.left-column[
-- Measurements
-    - Chlorophyll *a*
-    - Phycocyanin
-    - Microcystin
-    - Turbidity
-    - Physical profiles
-    - Secchi
-    - Plankton
-    - Nutrients
-]
-
-.right-column[
-&lt;img src="figure/chla.png" style="width: 120%; height: 120%; margin-top: 50px;"&gt;&lt;/img&gt;
-]
----
-
-# Temporal and spatial dynamics of cyanobacteria blooms
-
-- How will it be open?
-    - [Private (for now) GitHub]()
-    - Zenodo
-    - Open Access publications
-    - Data publication?
-    
-![cyano_space_time](figure/cyano_space_time.jpg)
-
----
-
-# New work
-
-- Hierarchical Bayes models of microcystin
-- Lake photic zone temperature
-- Phytoplankton community analysis
-
-&lt;img src="figure/Lila1.jpg" style="width: 42%; height: 42%; margin-left:30%"&gt;&lt;/img&gt;
 
 ---
 
