@@ -17,7 +17,7 @@ output:
 editor_options: 
   chunk_output_type: console
 ---
-class: center, middle, inverse
+class: title-slide   
 
 ```{r setup, include=FALSE, message=FALSE}
 options(htmltools.dir.version = FALSE)
@@ -28,7 +28,7 @@ options(htmltools.dir.version = FALSE)
 #data(pt_df)
 ```
 
-class: title-slide   
+
 
 # Lakes, Landscape, and R:
 ## A framework for open research on freshwater cyanobacteria
@@ -44,6 +44,7 @@ class: title-slide
 #### 2018-04-11
 
 ---
+class: center, middle, inverse
 
 # Twitter?
 
