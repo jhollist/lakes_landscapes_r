@@ -1,10 +1,10 @@
 ---
-title: "Lakes, Landscapes, and R: : A framework for open research on freshwater cyanobacteria"
-subtitle: |
-  | "US-IALE 2018"
-  | Chicago, IL
+title: "Lakes, Landscapes, and R:"
+subtitle: "A framework for open research on freshwater cyanobacteria"
 author: "Jeff Hollister and Bryan Milstead"
 date: 2018-04-11
+meeting: "US-IALE 2018"
+location: "Chicago, IL"
 output:
   xaringan::moon_reader:
     css: ["default", "custom.css"]
@@ -54,9 +54,10 @@ class: center, middle, inverse
   - Myself
   - Betty Kreakie
   - Bryan Milstead
-- 2 Post-docs
-  - Farnaz Nojavan
+- 1 Post-doc
   - Stephen Shivers
+- Alum
+  - Farnaz Nojavan
 ]
 
 .right-column[
@@ -73,7 +74,6 @@ class: center, middle, inverse
 
 
 ![The workflow](figure/cyano_model_function.jpg)
-
 
 ---
 class: center, middle, inverse
@@ -184,6 +184,10 @@ background-position: 50% 50%
 .right-column[
 <img src="figure/goatscape_logo.jpg" style="width: 90%; height: 90%;"></img>
 ]
+
+---
+
+# Plug for other landscape packages
 
 ---
 
