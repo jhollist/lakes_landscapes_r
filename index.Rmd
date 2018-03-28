@@ -28,8 +28,6 @@ options(htmltools.dir.version = FALSE)
 #data(pt_df)
 ```
 
-
-
 # Lakes, Landscape, and R:
 ## A framework for open research on freshwater cyanobacteria
 <br>

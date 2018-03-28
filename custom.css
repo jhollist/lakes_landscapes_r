@@ -1,4 +1,18 @@
-/* some custom css for slides
+/* some custom css for slides */
+
+.title-slide {
+  background-color: #205493;
+}
+
+.title-slide h1, h2, h3, h4 {
+  text-align: center;
+  color: #F7F8FA;
+}
+
+.title-slide .remark-slide-number {
+  display: none;
+}
+
 
 /* Two-column layout */
       .left-column {
@@ -25,15 +39,3 @@ a {
     background-color: #205493;
 }
 
-.title-slide {
-  background-image: url("slideMasterSample.png");
-  background-size: cover;
-}
-.title-slide h1, h2, h3 {
-  text-align: center;
-  color: #F7F8FA;
-}
-
-.title-slide .remark-slide-number {
-  display: none;
-}
