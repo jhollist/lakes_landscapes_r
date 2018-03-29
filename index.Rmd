@@ -72,6 +72,32 @@ class: center, middle, inverse
 - Use of R on increase.  Show data
 - Packages
 
+```{r echo=FALSE}
+library(rvest)
+library(dplyr)
+library(stringr)
+library(purrr)
+library(tidyr)
+usiale2018_url <- "https://usiale2018.sched.com/list/descriptions/"
+usiale2018_abstracts <- read_html(usiale2018_url) %>%
+  html_nodes(".tip-description") %>% 
+  html_text(trim = TRUE) %>%
+  tbl_df() %>%
+  filter(grepl("ABSTRACT:",.$value)) %>%
+  separate(value,c("authors","abstract"), "ABSTRACT: ") %>%
+  select(abstract) %>%
+  filter(grepl(" R ", .$abstract) |
+           grepl(" R package", .$abstract) |
+           grepl(" CRAN ", .$abstract))
+```
+
+
+```{r echo=FALSE}
+library(fulltext)
+library(rcrossref)
+le_works <- cr_works(filter = c(issn = "1572-9761", from_pub_date = "1993-08-01"), sample = 10)
+ft_get("10.1007/s10980-012-9837-x") %>% ft_collect()
+```
 ---
 class: center, middle, inverse
 
