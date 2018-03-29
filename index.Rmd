@@ -32,13 +32,10 @@ options(htmltools.dir.version = FALSE)
 ## A framework for open research on freshwater cyanobacteria
 <br>
 <br>
+### Jeff Hollister and Bryan Milstead (USEPA)
 <br>
-## Jeff Hollister and Bryan Milstead (USEPA)
-<br>
-<br>
-## US-IALE 2018
-### Chicago, IL
-<br>
+### US-IALE 2018
+#### Chicago, IL
 #### 2018-04-11
 
 ---
@@ -56,8 +53,29 @@ class: center, middle, inverse
 ---
 class: center, middle, inverse
 
-# Who, what, why, and how?
+# Reproducibility Crisis and Open Science Solutions
 
+---
+# Reproducibility Crisis
+
+- examples
+
+---
+# Open Science Solutions
+
+- Data
+- Code
+
+---
+# R in Ecology and Landscape Ecology
+
+- Use of R on increase.  Show data
+- Packages
+
+---
+class: center, middle, inverse
+
+# R, lakes, and cyanobacteria at USEPA 
 
 ---
 
@@ -88,26 +106,13 @@ class: center, middle, inverse
 
 - Apply computational approaches to understand water quality impacts in lakes
 - Open Science
-
+- Use R
+    - Analysis
+    - Sharing code
+    - Solve common problems
 
 ![The workflow](figure/cyano_model_function.jpg)
 
----
-class: center, middle, inverse
-
-# R Packages
-
----
-
-# Why R Packages
-
-- Useful structure
-- Infrastructure for sharing
-  - GitHub
-  - CRAN
-- We are an R shop!
-
-<img src="https://media.giphy.com/media/l2JhtKtDWYNKdRpoA/giphy.gif" style="width: 80%; height: 80%; margin-left: 10%;"></img>
 ---
 
 # Packages to solve common problems
@@ -124,6 +129,7 @@ class: center, middle, inverse
 
 .left-column[
 - Lake morphometry metrics in R
+- Built off of `sp`, `rgdal`, `rgeos`, and `raster` suite
 - Version 1.0 
   - August 2014
 - Version 1.1.0 
@@ -160,6 +166,7 @@ background-position: 50% 50%
   - Mapzen
   - AWS
   - USGS
+- Built off of `sp`, `rgdal`, `rgeos`, and `raster` suite
 - Version 0.1.1 
   - January 2017
 - Version 0.1.3 
@@ -203,8 +210,17 @@ background-position: 50% 50%
 ]
 
 ---
+class: center, middle, inverse
 
-# Plug for other landscape packages
+# Take Home Message
+
+---
+# Take Home Message
+
+- R is awesome
+- Can be used for a wide array of uses (including this talk)
+- Increasing use in LE
+- Our packages and Others
 
 ---
 
