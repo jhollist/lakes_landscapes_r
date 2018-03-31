@@ -93,10 +93,7 @@ usiale2018_abstracts <- read_html(usiale2018_url) %>%
 
 
 ```{r echo=FALSE}
-library(fulltext)
-library(rcrossref)
-le_works <- cr_works(filter = c(issn = "1572-9761", from_pub_date = "1993-08-01"), sample = 10)
-ft_get("10.1007/s10980-012-9837-x") %>% ft_collect()
+
 ```
 ---
 class: center, middle, inverse
