@@ -2,25 +2,83 @@ library(fulltext)
 library(rcrossref)
 library(dplyr)
 library(purrr)
-le_works <- cr_works(filter = c(issn = "1572-9761", from_pub_date = "1993-08-01"), sample = 10)
-le_clct <- ft_get("10.1371/journal.pone.0102437") %>% ft_collect()
+library(stringr)
+library(lubridate)
+library(readr)
 
-# PLoS example
-le_plos <- ft_search("landscape ecology", limit = 100)
-for(i in le_plos$plos$data$id){
-  ft_get(i) %>% ft_collect()
+if(!file.exists("le_works.rda")){
+  le_works <- cr_works(filter = c(issn = "1572-9761", 
+                                  from_pub_date = "1993-08-01",
+                                  until_pub_date = "2011-10-01"), limit = 1000)
+  le_works2 <- cr_works(filter = c(issn = "1572-9761", 
+                                   from_pub_date = "2011-10-02",
+                                   until_pub_date = "2018-04-02"), limit = 1000)
+  le_works_all <- bind_rows(le_works$data, le_works2$data)
+  save(le_works_all, file = "le_works.rda")
 }
 
-le_plos$plos$data$id %>%
-  map( ~ ft_get(.) %>% ft_collect())
+load("le_works.rda")
 
-le_plos_table <- ft_table()
+le_works_small <- le_works_all %>%
+  mutate(year = str_sub(issued,1, 4)) %>%
+  select(doi = DOI, year)
 
-le_plot_r_cite <- le_plos_table %>%
-  filter(grepl("R: A Language and Environment for Statistical Computing", .$text))
+if(!file.exists("le_fulltext.rda")){
+  ft_get_collect <- function(x){
+    suppressMessages({
+      ft_get(x) %>% 
+        ft_collect()
+    })
+  }
+  possible_ft<- possibly(ft_get_collect,otherwise = "ERROR")
+  
+  pb <- progress_estimated(length(le_works_small$doi))
+  le_works_small$doi %>%
+    map(~{
+      # update the progress bar (tick()) and print progress (print())
+      pb$tick()$print()
+      Sys.sleep(0.001)
+      possible_ft(.)
+    })
+  
+  files <- list.files("c:/Users/JHollist/AppData/Local/Cache/R/fulltext/", 
+                      "*.pdf", full.names = TRUE)
+  pb<- progress_estimated(length(files))
+  poss_readtext <- possibly(readtext::readtext, 
+                            otherwise = "error", quiet = TRUE)
+  le_table<-files %>%
+    map(~ {
+      # update the progress bar (tick()) and print progress (print())
+      pb$tick()$print()
+      Sys.sleep(0.000001)
+      poss_readtext(.)
+    })
 
-# Need to figure out how to get year published easier for cr_
+  le_table_df <- do.call(rbind.data.frame, le_table)
 
-le_plos_table %>%
-  filter(grepl("SAS", .$text))
+  le_table_df <- le_table_df %>%
+    mutate(doi = str_remove(doc_id,".pdf")) %>%
+    mutate(doi = str_replace(doi,"10_1007_","10.1007/")) %>%
+    mutate(doi = str_replace(doi,"_", "-")) %>%
+    full_join(le_works_small)
+  
+  save(le_table_df, file = "le_fulltext.rda")
+}
+
+load("le_fulltext.rda")
+
+# Join Not Working
+le_table_r <- le_table_df %>%
+  mutate(cites_r = grepl("cran", str_to_lower(.$text)) |
+           grepl("r package", str_to_lower(.$text)) |
+           grepl("r version", str_to_lower(.$text))) %>%
+  select(doi, cites_r, year)
+
+le_r_yearly <- le_table_r %>%
+  filter(doi != "error") %>%
+  group_by(year) %>%
+  summarize(num_r_cites = sum(cites_r))
+
+
+
 

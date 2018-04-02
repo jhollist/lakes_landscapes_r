@@ -27,3 +27,4 @@ vignettes/*.pdf
 /epa_forms/
 lakes_landscapes_r.Rproj
 phantomjs.exe
+le_fulltext.rda
