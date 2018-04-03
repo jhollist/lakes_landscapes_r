@@ -87,11 +87,13 @@ le_table_r <- le_table_df %>%
 le_r_yearly <- le_table_r %>%
   filter(doi != "error") %>%
   group_by(year) %>%
-  summarize(num_r_cites = sum(cites_r),
-            num_sas_cites = sum(cites_sas),
-            num_articles = n(),
-            percent_r_cites = round(sum(cites_r)/n()*100,2),
-            percent_sas_cites = round(sum(cites_sas)/n()*100,2))
+  summarize(num_articles = n(),
+            r = sum(cites_r),
+            sas = sum(cites_sas),
+            python = sum(cites_python),
+            splus = sum(cites_splus),
+            excel = sum(cites_excel)) %>%
+  write_csv("le_lang_year.csv")
 
 
 

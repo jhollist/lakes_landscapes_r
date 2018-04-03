@@ -92,13 +92,14 @@ class: center, middle, inverse
 ---
 # R in Ecology and Landscape Ecology
 
+.left-column[
 - Use of R on increase
 - Packages
   - landsat
   - SDMtools
   - nlmr
   - landscapetools
-  
+]  
 
 ```{r echo=FALSE, eval = FALSE}
 library(rvest)
@@ -119,10 +120,26 @@ usiale2018_abstracts <- read_html(usiale2018_url) %>%
            grepl(" CRAN ", .$abstract))
 ```
 
-
-```{r echo=FALSE}
-
+.right-column[
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+library(rvest)
+library(dplyr)
+library(stringr)
+library(purrr)
+library(tidyr)
+library(hrbrthemes)
+library(ggplot2)
+read_csv("le_lang_year.csv") %>%
+  gather(language, cites, r:excel) %>%
+  mutate(percent = round(cites/num_articles, 2)) %>%
+  ggplot(aes(x = year, y = percent, color = language)) +
+  #geom_point() +
+  geom_smooth(se = FALSE) +
+  theme_ipsum() +
+  scale_color_manual(values = c("darkgreen","darkgoldenrod","darkblue","darkred","darkgrey"))
 ```
+]
+
 ---
 class: center, middle, inverse
 
