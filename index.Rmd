@@ -92,6 +92,7 @@ class: center, middle, inverse
 ---
 # R in Landscape Ecology
 
+.left-column[
 - Use of R on increase
 - Packages
   - Old-timers: sp, rgdal, raster, rgeos, 
@@ -101,27 +102,9 @@ class: center, middle, inverse
   - nlmr
   - landscapetools
   - landscapemetrics
-
-```{r echo=FALSE, eval = FALSE}
-library(rvest)
-library(dplyr)
-library(stringr)
-library(purrr)
-library(tidyr)
-usiale2018_url <- "https://usiale2018.sched.com/list/descriptions/"
-usiale2018_abstracts <- read_html(usiale2018_url) %>%
-  html_nodes(".tip-description") %>% 
-  html_text(trim = TRUE) %>%
-  tbl_df() %>%
-  filter(grepl("ABSTRACT:",.$value)) %>%
-  separate(value,c("authors","abstract"), "ABSTRACT: ") %>%
-  select(abstract) %>%
-  filter(grepl(" R ", .$abstract) |
-           grepl(" R package", .$abstract) |
-           grepl(" CRAN ", .$abstract))
-```
-
-```{r echo=FALSE, warning=FALSE, message=FALSE,dpi=300}
+]
+.right-column[
+```{r echo=FALSE, warning=FALSE, message=FALSE,dpi=300, fig.height=5, fig.width=7}
 library(rvest)
 library(dplyr)
 library(stringr)
@@ -130,15 +113,20 @@ library(tidyr)
 library(hrbrthemes)
 library(ggplot2)
 read_csv("le_lang_year.csv") %>%
+  filter(year > 2004) %>%
   gather(language, cites, r:excel) %>%
   mutate(percent = round(cites/num_articles, 2)) %>%
   ggplot(aes(x = year, y = percent, color = language)) +
   #geom_point() +
-  geom_smooth(se = FALSE) +
-  theme_ipsum() +
-  scale_color_manual(values = c("darkgreen","darkgoldenrod","darkblue","darkred","darkgrey"))
+  geom_smooth(se = FALSE, size = 1.5) +
+  theme_ipsum(base_size = 11, axis_title_size = 11) +
+  scale_color_manual(values = c("darksalmon","darkgoldenrod","darkblue",
+                                "darkred","darkgrey")) +
+  scale_x_continuous(labels = seq(2005,2020,by=4),
+                       breaks = seq(2005,2020,by=4)) +
+  labs(y = "percent of articles")
 ```
-
+]
 
 ---
 class: center, middle, inverse
