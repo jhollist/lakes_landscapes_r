@@ -108,7 +108,7 @@ ggsave(plot = ggp, filename = "figure/r_lang.png", width = 8, height = 6, units 
 
 <img src="figure/r_lang.png" style="margin-top: -40px; width: 90%"></img>
 
-.footnote[Text mining facilitated by the rOpenSci's awesome [`fulltext`](https://CRAN.R-project.org/package=fulltext) package]
+.footnote[Text mining facilitated by [rOpenSci's](https://ropensci.org) awesome [`fulltext`](https://CRAN.R-project.org/package=fulltext) package]
 ---
 # R in Landscape Ecology
 
@@ -276,7 +276,7 @@ class: center, middle, inverse
 
 # Thanks!
 .center[
-## Jeff Hollister
+**Jeff Hollister**
 US EPA </br>
 Atlantic Ecology Division </br>
 Narragansett, RI </br>
