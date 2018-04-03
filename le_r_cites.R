@@ -59,25 +59,39 @@ if(!file.exists("le_fulltext.rda")){
   le_table_df <- le_table_df %>%
     mutate(doi = str_remove(doc_id,".pdf")) %>%
     mutate(doi = str_replace(doi,"10_1007_","10.1007/")) %>%
-    mutate(doi = str_replace(doi,"_", "-")) %>%
-    full_join(le_works_small)
+    mutate(doi = str_replace_all(doi,"_", "-")) %>%
+    full_join(le_works_small) %>%
+    filter(doc_id != "error") %>%
+    unique()
   
   save(le_table_df, file = "le_fulltext.rda")
 }
 
 load("le_fulltext.rda")
 
-# Join Not Working
 le_table_r <- le_table_df %>%
-  mutate(cites_r = grepl("cran", str_to_lower(.$text)) |
-           grepl("r package", str_to_lower(.$text)) |
-           grepl("r version", str_to_lower(.$text))) %>%
-  select(doi, cites_r, year)
+  mutate(low_text = str_to_lower(text)) %>%
+  mutate(cites_r = grepl(" cran ", .$low_text) |
+           grepl(" r package ", .$low_text) |
+           grepl(" r version ", .$low_text),
+         cites_sas = grepl(" sas ", .$low_text) |
+           grepl(" sas institute", .$low_text),
+         cites_python = grepl(" python ", .$low_text),
+         cites_splus = grepl(" splus", .$low_text) |
+           grepl(" s\\+ ", .$low_text) |
+           grepl(" s-plus ", .$low_text) |
+           grepl(" s plus ", .$low_text),
+         cites_excel = grepl(" excel ", .$low_text)) %>%
+  select(doi, cites_r, cites_sas, cites_python, cites_splus, cites_excel, year)
 
 le_r_yearly <- le_table_r %>%
   filter(doi != "error") %>%
   group_by(year) %>%
-  summarize(num_r_cites = sum(cites_r))
+  summarize(num_r_cites = sum(cites_r),
+            num_sas_cites = sum(cites_sas),
+            num_articles = n(),
+            percent_r_cites = round(sum(cites_r)/n()*100,2),
+            percent_sas_cites = round(sum(cites_sas)/n()*100,2))
 
 
 
