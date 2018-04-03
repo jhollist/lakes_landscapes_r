@@ -101,6 +101,8 @@ ggp <- read_csv("le_lang_year.csv") %>%
                                 "darkred","darkgrey")) +
   scale_x_continuous(labels = seq(2005,2020,by=4),
                        breaks = seq(2005,2020,by=4)) +
+  scale_y_continuous(labels = seq(0, 30, by = 5),
+                     breaks = seq(0,30,by=5))
   labs(y = "percent of articles")
 ggsave(plot = ggp, filename = "figure/r_lang.png", width = 8, height = 6, units = "in",
        dpi = 600)
