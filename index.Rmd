@@ -90,16 +90,17 @@ class: center, middle, inverse
 - Code
 
 ---
-# R in Ecology and Landscape Ecology
+# R in Landscape Ecology
 
-.left-column[
 - Use of R on increase
 - Packages
+  - Old-timers: sp, rgdal, raster, rgeos, 
+  - Whippersnappers: sf, stars
   - landsat
   - SDMtools
   - nlmr
   - landscapetools
-]  
+  - landscapemetrics
 
 ```{r echo=FALSE, eval = FALSE}
 library(rvest)
@@ -120,8 +121,7 @@ usiale2018_abstracts <- read_html(usiale2018_url) %>%
            grepl(" CRAN ", .$abstract))
 ```
 
-.right-column[
-```{r echo=FALSE, warning=FALSE, message=FALSE}
+```{r echo=FALSE, warning=FALSE, message=FALSE,dpi=300}
 library(rvest)
 library(dplyr)
 library(stringr)
@@ -138,7 +138,7 @@ read_csv("le_lang_year.csv") %>%
   theme_ipsum() +
   scale_color_manual(values = c("darkgreen","darkgoldenrod","darkblue","darkred","darkgrey"))
 ```
-]
+
 
 ---
 class: center, middle, inverse
@@ -166,7 +166,6 @@ class: center, middle, inverse
 .right-column[
 <img src="figure/comp_eco_crew.jpg" style="margin-left: 75px"></img>
 ]
-
 
 ---
 
