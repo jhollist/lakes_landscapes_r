@@ -106,7 +106,7 @@ ggsave(plot = ggp, filename = "figure/r_lang.png", width = 8, height = 6, units 
        dpi = 600)
 ```
 
-<img src="figure/r_lang.png" style="margin-top: -40px; width: 90%"></img>
+<img src="figure/r_lang.png" style="margin-top: -35px; width: 90%"></img>
 
 .footnote[Text mining facilitated by [rOpenSci's](https://ropensci.org) awesome [`fulltext`](https://CRAN.R-project.org/package=fulltext) package]
 ---
