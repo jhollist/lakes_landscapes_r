@@ -29,7 +29,7 @@ options(htmltools.dir.version = FALSE)
 ```
 
 # Lakes, Landscape, and R:
-## A framework for open research on freshwater cyanobacteria
+## A framework for open science on freshwater cyanobacteria
 <br>
 <br>
 ### Jeff Hollister and Bryan Milstead (USEPA)
@@ -57,19 +57,7 @@ class: center, middle, inverse
 
 ---
 
-# What is open science? 
-
-- Access to materials     
-- Reproducible/ Repeatable    
-- The Web!                   
-- A process, not a state                       
-
-<img src="figure/open_sign_4344960203_821cb56ec9_o_resize.jpg" style="height: 80%; width: 80%; margin-left: 100px"></img>
-
----
-
 # Why open science?
-
 
 - Often required
   - Government/Funders/Journals
@@ -92,19 +80,7 @@ class: center, middle, inverse
 ---
 # R in Landscape Ecology
 
-.left-column[
-- Use of R on increase
-- Packages
-  - Old-timers: sp, rgdal, raster, rgeos, 
-  - Whippersnappers: sf, stars
-  - landsat
-  - SDMtools
-  - nlmr
-  - landscapetools
-  - landscapemetrics
-]
-.right-column[
-```{r echo=FALSE, warning=FALSE, message=FALSE,dpi=300, fig.height=5, fig.width=7}
+```{r r_lang,echo=FALSE, include=FALSE, warning=FALSE, message=FALSE}
 library(rvest)
 library(dplyr)
 library(stringr)
@@ -112,7 +88,8 @@ library(purrr)
 library(tidyr)
 library(hrbrthemes)
 library(ggplot2)
-read_csv("le_lang_year.csv") %>%
+library(readr)
+ggp <- read_csv("le_lang_year.csv") %>%
   filter(year > 2004) %>%
   gather(language, cites, r:excel) %>%
   mutate(percent = round(cites/num_articles, 2)) %>%
@@ -125,8 +102,25 @@ read_csv("le_lang_year.csv") %>%
   scale_x_continuous(labels = seq(2005,2020,by=4),
                        breaks = seq(2005,2020,by=4)) +
   labs(y = "percent of articles")
+ggsave(plot = ggp, filename = "figure/r_lang.png", width = 8, height = 6, units = "in",
+       dpi = 600)
 ```
-]
+
+<img src="figure/r_lang.png" style="margin-top: -100px; width: 82%"></img>
+
+.footnote[Text mining facilitated by the rOpenSci's awesome [`fulltext`](https://CRAN.R-project.org/package=fulltext) package]
+---
+# R in Landscape Ecology
+
+- Foundations
+  - [`sp`](https://CRAN.R-project.org/package=fulltext), [`rgdal`](https://CRAN.R-project.org/package=fulltext), [`raster`](https://CRAN.R-project.org/package=fulltext), [`rgeos`](https://CRAN.R-project.org/package=fulltext) 
+  - [`sf`](https://CRAN.R-project.org/package=fulltext), [`stars`](https://CRAN.R-project.org/package=fulltext)
+- Speciality
+  - [`landsat`](https://CRAN.R-project.org/package=fulltext)
+  - [`SDMtools`](https://CRAN.R-project.org/package=fulltext)
+  - [`nlmr`](https://CRAN.R-project.org/package=fulltext)
+  - [`landscapetools`](https://CRAN.R-project.org/package=fulltext)
+  - [`landscapemetrics`](https://CRAN.R-project.org/package=fulltext)
 
 ---
 class: center, middle, inverse
@@ -171,6 +165,7 @@ class: center, middle, inverse
 ---
 
 # Packages to solve common problems
+
   - `lakemorpho`
   - `elevatr`
   - `goatscape` (in development)
