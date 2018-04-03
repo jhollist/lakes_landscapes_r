@@ -92,7 +92,7 @@ library(readr)
 ggp <- read_csv("le_lang_year.csv") %>%
   filter(year > 2004) %>%
   gather(language, cites, r:excel) %>%
-  mutate(percent = round(cites/num_articles, 2)) %>%
+  mutate(percent = round(cites/num_articles*100, 2)) %>%
   ggplot(aes(x = year, y = percent, color = language)) +
   #geom_point() +
   geom_smooth(se = FALSE, size = 1.5) +
