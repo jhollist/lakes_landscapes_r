@@ -1,7 +1,7 @@
 /* some custom css for slides */
 
 .title-slide {
-  background-color: #205493;
+  background-color: #00008B;
 }
 
 .title-slide h1, h2, h3, h4 {
@@ -36,6 +36,7 @@ a {
 }
 
 .inverse {
-    background-color: #205493;
+    /*#205493*/
+    background-color: #00008B;
 }
 
