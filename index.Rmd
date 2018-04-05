@@ -194,18 +194,8 @@ class: center, middle, inverse
 ]
 
 .right-column[
-![lakemorpho](figure/lakemorpho.png)
+![lakemorpho](figure/lakemorpho_demo.gif)
 ]
-
----
-class: center, middle
-background-image: url('figure/lakemorpho_demo.png')
-background-position: 50% 50%
-
-# lakemorpho::demo
-
-<!-- # [lakemorpho: Demo](http://server.jwhollister.com:8787) -->
-
 
 ---
 
@@ -228,18 +218,8 @@ background-position: 50% 50%
 ]
 
 .right-column[
-![elevatr](figure/elevatr.png)
+![elevatr](figure/elevatr_demo.gif)
 ]
-
-
----
-class: center, middle
-background-image: url('figure/elevatr_demo.png')
-background-position: 50% 50%
-
-# elevatr::demo
-
-<!-- # [elevatr: Demo](http://server.jwhollister.com:8787) -->
 
 ---
 
