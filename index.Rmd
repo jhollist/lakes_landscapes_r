@@ -263,7 +263,7 @@ class: center, middle, inverse
 ]
 
 .footnote[
-![](figure/goatscape_logo.jpg) Repository URL: <https://github.com/usepa/goatscape>
+<img src="figure/goatscape_logo.jpg" style="width: 50px;"></img> Repository URL: <https://github.com/usepa/goatscape>
 ]
 
 ---
