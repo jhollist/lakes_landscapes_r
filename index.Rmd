@@ -194,7 +194,7 @@ class: center, middle, inverse
 ]
 
 .right-column[
-![lakemorpho](figure/lakemorpho_demo.gif)
+<img src="figure/lakemorpho_demo.gif" style: margin-top: 50px"></img>
 ]
 
 ---
