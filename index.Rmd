@@ -28,7 +28,7 @@ options(htmltools.dir.version = FALSE)
 #data(pt_df)
 ```
 
-# Lakes, Landscape, and R:
+# Lakes, Landscapes, and R:
 ## A framework for open science on freshwater cyanobacteria
 <br>
 <br>
@@ -43,8 +43,7 @@ class: center, middle, inverse
 
 # Twitter?
 
-
-![Yes!!!](https://media1.giphy.com/media/kvBzgZMqOLwiY/200w.webp)
+[![](figure/jonah_hill_ok.gif)](https://giphy.com/gifs/reaction-R459x856IfF6w)
 
 ### hashtag: \#usiale2018 \#rstats \#cyanobacteria 
 ### me: @jhollist
@@ -68,14 +67,34 @@ class: center, middle, inverse
 - Benefits to society
   - ["Sharing of Data Leads to Progress on Alzheimer’s"](http://www.nytimes.com/2010/08/13/health/research/13alzheimer.html)
 
-<img src="https://media.giphy.com/media/1M9fmo1WAFVK0/giphy.gif" style="width: 60%; height: 60%; margin-left: 20%;"></img>
+[![](figure/but_why.gif)](https://giphy.com/gifs/why-ryan-reynolds-1M9fmo1WAFVK0) style="width: 60%; height: 60%; margin-left: 20%;"></img>
 
 ---
 # Open Science Solutions
 
-- Publishing
-- Data
-- Code
+- Open Access
+- <span style="color: lightgrey;">Open Data</span>
+- <span style="color: lightgrey;">Open Source Code</span>
+
+.center[[![oa](figure/oa_dr_evil.jpg)](https://memecreator.org/meme/open-access)]
+
+---
+# Open Science Solutions
+
+- <span style="color: lightgrey;">Open Access</span>
+- Open Data
+- <span style="color: lightgrey;">Open Source Code</span>
+
+.center[[![data](figure/data_article.jpg)](https://blogs.uoregon.edu/datamanagement/2017/02/14/lydweek-2017-2/)]
+
+---
+# Open Science Solutions
+
+- <span style="color: lightgrey;">Open Access</span>
+- <span style="color: lightgrey;">Open Data</span>
+- Open Source Code
+
+.center[[![programmer](figure/programmer.png)](https://rforcats.net)]
 
 ---
 # R in Landscape Ecology
@@ -147,7 +166,7 @@ class: center, middle, inverse
 ]
 
 .right-column[
-<img src="figure/comp_eco_crew.jpg" style="margin-left: 75px"></img>
+<img src="figure/comp_eco_crew.jpg" style="margin-left: 25px; margin-top: -50px;"></img>
 ]
 
 ---
@@ -165,7 +184,7 @@ class: center, middle, inverse
 
 ---
 
-# Packages to solve common problems
+# R to solve common problems
 
   - `lakemorpho`
   - `elevatr`
@@ -180,21 +199,21 @@ class: center, middle, inverse
 
 .left-column[
 - Lake morphometry metrics in R
-- Built off of `sp`, `rgdal`, `rgeos`, and `raster` suite
+- `sp`, `rgdal`, `rgeos`, and `raster`
 - Version 1.0 
   - August 2014
 - Version 1.1.0 
   - December 2016
 - `sf` support to be added
 - [National Lake Morphometry](https://edg.epa.gov/metadata/catalog/search/resource/details.page?uuid=%7B495CBAED-9BB9-49B4-80A7-1C91DE5FCA95%7D)
-- [Some metrics included in NHD+](https://s3.amazonaws.com/nhdplus/NHDPlusV21/Documentation/NHDPlusV2_User_Guide.pdf#page=52)
+- [NHD Plus](https://s3.amazonaws.com/nhdplus/NHDPlusV21/Documentation/NHDPlusV2_User_Guide.pdf#page=52)
 - [Hollister and Milstead (2010)](http://dx.doi.org/10.1080/07438141.2010.504321)
 - [Hollister *et. al.* (2011)](http://dx.doi.org/10.1371/journal.pone.0025764)
 - [Hollister and Stachelek (2017)](https://f1000research.com/articles/6-1718/v1)
 ]
 
 .right-column[
-<img src="figure/lakemorpho_demo.gif" style: margin-top: 50px"></img>
+![lm demo](figure/lakemorpho_demo.gif)
 ]
 
 ---
@@ -205,7 +224,10 @@ class: center, middle, inverse
 
 .left-column[
 - Access elevation data in R
-  - Mapzen
+  - ~~Mapzen~~
+      - closed!
+      - Mostly replaced by <https://www.nextzen.org/>
+      - Not yet incorporated
   - AWS
   - USGS
 - Built off of `sp`, `rgdal`, `rgeos`, and `raster` suite
@@ -230,35 +252,25 @@ class: center, middle, inverse
 - What's in a name?
 - Summarizes ancillary data for a user-defined landscape polygon
   - Census (via `censusapi`)
-  - Landcover
-  - Impervious
+  - Landcover and Impervious (via `FedData`)
 - Accepts arbitrary spatial data for the landscape
-- Based on `sf` and tidy by design
-- <https://github.com/usepa/goatscape>
+- Based on `sf`
+- Tidy by design
 ]
 
 .right-column[
-<img src="figure/goatscape_logo.jpg" style="width: 90%; height: 90%;"></img>
+![goatscape demo](figure/goatscape_demo.gif)
 ]
 
----
-class: center, middle, inverse
-
-# Take Home Message
-
----
-# Take Home Message
-
-- R is awesome
-- Can be used for a wide array of uses (including this talk)
-- Increasing use in LE
-- Our packages and Others
+.footnote[
+![](figure/goatscape_logo.jpg) Repository URL: <https://github.com/usepa/goatscape>
+]
 
 ---
 
 # Thanks!
 .center[
-**Jeff Hollister**
+**Jeff Hollister**</br>
 US EPA </br>
 Atlantic Ecology Division </br>
 Narragansett, RI </br>
