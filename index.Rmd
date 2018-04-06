@@ -14,6 +14,7 @@ output:
       highlightLines: true
       countIncrementalSlides: true
     seal: false
+    self_contained: true
 editor_options: 
   chunk_output_type: console
 ---
@@ -127,7 +128,7 @@ ggsave(plot = ggp, filename = "figure/r_lang.png", width = 8, height = 6, units 
        dpi = 600)
 ```
 
-.center[<img src="figure/r_lang.png" style="width: 80%;"></img>]
+.center[<a href="https://github.com/jhollist/lakes_landscapes_r/blob/master/le_r_cites.R"><img src="figure/r_lang.png" style="width: 80%;"></img></a>]
 
 .footnote[Text mining facilitated by [rOpenSci's](https://ropensci.org) awesome [`fulltext`](https://CRAN.R-project.org/package=fulltext) package]
 ---
@@ -208,8 +209,8 @@ class: center, middle, inverse
 - `sp`, `rgdal`, `rgeos`, and `raster`
 - Version 1.0 
   - August 2014
-- Version 1.1.0 
-  - December 2016
+- Version 1.1.1 
+  - February 2018
 - `sf` support to be added
 - [National Lake Morphometry](https://edg.epa.gov/metadata/catalog/search/resource/details.page?uuid=%7B495CBAED-9BB9-49B4-80A7-1C91DE5FCA95%7D)
 - [NHD Plus](https://s3.amazonaws.com/nhdplus/NHDPlusV21/Documentation/NHDPlusV2_User_Guide.pdf#page=52)
