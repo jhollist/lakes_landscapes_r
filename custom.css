@@ -1,12 +1,20 @@
 /* some custom css for slides */
 
 .title-slide {
-  background-color: #162d50;
+  background-image: url("figure/yawgoo.jpg");
+  background-repeat: no-repeat;
+  background-size: 1500px;
+  
 }
 
-.title-slide h1, h2, h3, h4 {
+.title-slide h1, h2 {
   text-align: center;
-  color: #F7F8FA;
+  color: #162d50;
+}
+
+.title-slide h3, h4 {
+  text-align: center;
+  color: lightgray;
 }
 
 .title-slide .remark-slide-number {

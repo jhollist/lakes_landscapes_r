@@ -19,7 +19,7 @@ class: title-slide
 ## A framework for open science on freshwater cyanobacteria
 &lt;br&gt;
 &lt;br&gt;
-### Jeff Hollister and Bryan Milstead (USEPA)
+### Jeff Hollister and Bryan Milstead
 &lt;br&gt;
 ### US-IALE 2018
 #### Chicago, IL
@@ -52,9 +52,9 @@ class: center, middle, inverse
 - Improves quality
   - [The classic example: Reinhart and Rogoff](http://www.newyorker.com/news/john-cassidy/the-reinhart-and-rogoff-controversy-a-summing-up)
 - Benefits to society
-  - ["Sharing of Data Leads to Progress on Alzheimerâ€™s"](http://www.nytimes.com/2010/08/13/health/research/13alzheimer.html)
+  - ["Sharing of Data Leads to Progress on Alzheimer’s"](http://www.nytimes.com/2010/08/13/health/research/13alzheimer.html)
 
-[![](figure/but_why.gif)](https://giphy.com/gifs/why-ryan-reynolds-1M9fmo1WAFVK0) style="width: 60%; height: 60%; margin-left: 20%;"&gt;&lt;/img&gt;
+.center[&lt;a href="https://giphy.com/gifs/why-ryan-reynolds-1M9fmo1WAFVK0"&gt;&lt;img src="figure/but_why.gif" style="width: 70%;"&gt;&lt;/img&gt;&lt;/a&gt;]
 
 ---
 # Open Science Solutions
@@ -84,20 +84,26 @@ class: center, middle, inverse
 .center[[![programmer](figure/programmer.png)](https://rforcats.net)]
 
 ---
-# R in Landscape Ecology
+# R and Landscape Ecology
 
 
 
-&lt;img src="figure/r_lang.png" style="margin-top: -35px; width: 90%"&gt;&lt;/img&gt;
+.center[&lt;img src="figure/r_lang.png" style="width: 80%;"&gt;&lt;/img&gt;]
 
 .footnote[Text mining facilitated by [rOpenSci's](https://ropensci.org) awesome [`fulltext`](https://CRAN.R-project.org/package=fulltext) package]
 ---
-# R in Landscape Ecology
+# R and Landscape Ecology
 
-- Foundations
-  - [`sp`](https://CRAN.R-project.org/package=sp), [`rgdal`](https://CRAN.R-project.org/package=rgdal), [`raster`](https://CRAN.R-project.org/package=raster), [`rgeos`](https://CRAN.R-project.org/package=rgeos) 
-  - [`sf`](https://CRAN.R-project.org/package=sf), [`stars`](https://github.com/r-spatial/stars)
-- Speciality
+
+- Foundataions
+  - [`sp`](https://CRAN.R-project.org/package=sp) 
+  - [`rgdal`](https://CRAN.R-project.org/package=rgdal)
+  - [`raster`](https://CRAN.R-project.org/package=raster)
+  - [`rgeos`](https://CRAN.R-project.org/package=rgeos)
+- The Future
+  - [`sf`](https://CRAN.R-project.org/package=sf)
+  - [`stars`](https://github.com/r-spatial/stars)
+- Speciality (Missing many!)
   - [`landsat`](https://CRAN.R-project.org/package=landsat)
   - [`SDMtools`](https://CRAN.R-project.org/package=SDMTools)
   - [`nlmr`](https://CRAN.R-project.org/package=NLMR)
@@ -174,9 +180,9 @@ class: center, middle, inverse
 ]
 
 .right-column[
-![lm demo](figure/lakemorpho_demo.gif)
+&lt;!--![lm demo](figure/lakemorpho_demo.gif)--&gt;
+&lt;img src="figure/lakemorpho_demo.gif" style="margin-top: -50px; margin-left: -15px; max-width: 120%;"&gt;&lt;/img&gt;
 ]
-
 ---
 
 # `elevatr`
@@ -187,8 +193,6 @@ class: center, middle, inverse
 - Access elevation data in R
   - ~~Mapzen~~
       - closed!
-      - Mostly replaced by &lt;https://www.nextzen.org/&gt;
-      - Not yet incorporated
   - AWS
   - USGS
 - Built off of `sp`, `rgdal`, `rgeos`, and `raster` suite
@@ -196,12 +200,16 @@ class: center, middle, inverse
   - January 2017
 - Version 0.1.3 
   - March 2017
+- Version 0.2.0??
+  - `sf` support to be added
+  - Incorporate &lt;https://www.nextzen.org/&gt;
 - Will be paired with `lakemorpho`
-- `sf` support to be added
+
 ]
 
 .right-column[
-![elevatr](figure/elevatr_demo.gif)
+&lt;!--![elevatr](figure/elevatr_demo.gif)--&gt;
+&lt;img src="figure/elevatr_demo.gif" style="margin-top: -50px; margin-left: -15px; max-width: 120%;"&gt;&lt;/img&gt;
 ]
 
 ---
@@ -209,7 +217,7 @@ class: center, middle, inverse
 # `goatscape`
 
 .left-column[
-- New effort with Bryan Milstead
+- New effort
 - What's in a name?
 - Summarizes ancillary data for a user-defined landscape polygon
   - Census (via `censusapi`)
@@ -220,17 +228,20 @@ class: center, middle, inverse
 ]
 
 .right-column[
-![goatscape demo](figure/goatscape_demo.gif)
+&lt;!--![goatscape demo](figure/goatscape_logo.jpg)--&gt;
+&lt;img src="figure/goatscape_logo.jpg" style="margin-top: -90px; margin-left: -15px; max-width: 110%;"&gt;&lt;/img&gt;
 ]
 
 .footnote[
-&lt;img src="figure/goatscape_logo.jpg" style="width: 50px;"&gt;&lt;/img&gt; Repository URL: &lt;https://github.com/usepa/goatscape&gt;
+Repository URL: &lt;https://github.com/usepa/goatscape&gt;
 ]
 
 ---
 
 # Thanks!
+.left-column[
 .center[
+&lt;/br&gt;
 **Jeff Hollister**&lt;/br&gt;
 US EPA &lt;/br&gt;
 Atlantic Ecology Division &lt;/br&gt;
@@ -238,9 +249,26 @@ Narragansett, RI &lt;/br&gt;
 email: [hollister.jeff@epa.gov](mailto:hollister.jeff@epa.gov) &lt;/br&gt;
 twitter: [@jhollist](https://twitter.com/jhollist) &lt;/br&gt;
 github: [jhollist](https://github.com/jhollist) &lt;/br&gt;
+]]
+
+.right-column[
+.center[
+**Bryan Milstead**&lt;/br&gt;
+US EPA &lt;/br&gt;
+Atlantic Ecology Division &lt;/br&gt;
+Narragansett, RI &lt;/br&gt;
+email: [milstead.bryan@epa.gov](mailto:milstead.bryan@epa.gov) &lt;/br&gt;
+twitter: [@willbmisled](https://twitter.com/willbmisled) &lt;/br&gt;
+github: [willbmisled](https://github.com/willbmisled) &lt;/br&gt;
+]]
 
 
-Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan).
+.footnote[
+**Package acknowledgements**
+- Slides created with [`xaringan`](https://cran.r-project.org/package=xaringan) 
+- Figures created with [`ggplot2`](https://cran.r-project.org/package=ggplot2) and [`hrbrthemes`](https://cran.r-project.org/package=hrbrthemes)
+- Data analysis made **MUCH** easier with the [`tidyverse`](https://cran.r-project.org/package=tidyverse)
+- Text mining of Landscape Ecology done with [`fulltext`](https://cran.r-project.org/package=fulltext) and [`rcrossref`](https://cran.r-project.org/package=rcrossref)
 ]
     </textarea>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
