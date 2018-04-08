@@ -31,10 +31,11 @@ options(htmltools.dir.version = FALSE)
 
 # Lakes, Landscapes, and R:
 ## A framework for open science on freshwater cyanobacteria
-<br>
-<br>
+</br>
+</br>
+</br>
 ### Jeff Hollister and Bryan Milstead
-<br>
+</br>
 ### US-IALE 2018
 #### Chicago, IL
 #### 2018-04-11
@@ -42,12 +43,12 @@ options(htmltools.dir.version = FALSE)
 ---
 class: center, middle, inverse
 
-# Twitter?
+# Twitter and Photos?
 
 [![](figure/jonah_hill_ok.gif)](https://giphy.com/gifs/reaction-R459x856IfF6w)
 
-### hashtag: \#usiale2018 \#rstats \#cyanobacteria 
-### me: @jhollist
+### \#usiale2018 \#rstats \#cyanobacteria 
+### @jhollist
 
 
 ---
@@ -57,18 +58,14 @@ class: center, middle, inverse
 
 ---
 
-# Why open science?
+# What is open science? 
 
-- Often required
-  - Government/Funders/Journals
-- Benefits researchers
-  - [Mciernan et al. (2016) How open science helps researchers succeed](https://elifesciences.org/content/5/e16800)
-- Improves quality
-  - [The classic example: Reinhart and Rogoff](http://www.newyorker.com/news/john-cassidy/the-reinhart-and-rogoff-controversy-a-summing-up)
-- Benefits to society
-  - ["Sharing of Data Leads to Progress on Alzheimer’s"](http://www.nytimes.com/2010/08/13/health/research/13alzheimer.html)
+- Access to materials     
+- Reproducible/ Repeatable    
+- The Web!                   
+- A process, not a state                       
 
-.center[<a href="https://giphy.com/gifs/why-ryan-reynolds-1M9fmo1WAFVK0"><img src="figure/but_why.gif" style="width: 70%;"></img></a>]
+<a href="https://www.flickr.com/photos/lofink/4344960203"><img src="figure/open_sign_4344960203_821cb56ec9_o_resize.jpg" style="height: 80%; width: 80%; margin-left: 100px"></img></a>
 
 ---
 # Open Science Solutions
@@ -131,6 +128,7 @@ ggsave(plot = ggp, filename = "figure/r_lang.png", width = 8, height = 6, units 
 .center[<a href="https://github.com/jhollist/lakes_landscapes_r/blob/master/le_r_cites.R"><img src="figure/r_lang.png" style="width: 80%;"></img></a>]
 
 .footnote[Text mining facilitated by [rOpenSci's](https://ropensci.org) awesome [`fulltext`](https://CRAN.R-project.org/package=fulltext) package]
+
 ---
 # R and Landscape Ecology
 
