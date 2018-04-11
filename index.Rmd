@@ -307,4 +307,8 @@ github: [willbmisled](https://github.com/willbmisled) </br>
 - Figures created with [`ggplot2`](https://cran.r-project.org/package=ggplot2) and [`hrbrthemes`](https://cran.r-project.org/package=hrbrthemes)
 - Data analysis made **MUCH** easier with the [`tidyverse`](https://cran.r-project.org/package=tidyverse)
 - Text mining of Landscape Ecology done with [`fulltext`](https://cran.r-project.org/package=fulltext) and [`rcrossref`](https://cran.r-project.org/package=rcrossref)
+
+**Slides and Source Code**
+- Slides: <https://jwhollister.com/lakes_landscapes_r>
+- Repo: <https://github.com/jhollist/lakes_landscapes_r>
 ]
