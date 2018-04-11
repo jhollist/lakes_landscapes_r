@@ -195,7 +195,7 @@ class: center, middle, inverse
   - `elevatr`
   - `goatscape` (in development)
   
-<img src="https://media3.giphy.com/media/ID4NXWnwuLnLq/200.webp#0-grid1" style="width: 80%; height: 80%; margin-left: 10%;"></img>
+<a href = "figure/computer GIF-source.gif"><img src="figure/computer GIF-source.gif" style="width: 80%; height: 80%; margin-left: 10%;"></img></a>
 ---
 
 # `lakemorpho`
