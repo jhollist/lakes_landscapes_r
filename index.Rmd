@@ -132,8 +132,8 @@ ggsave(plot = ggp, filename = "figure/r_lang.png", width = 8, height = 6, units 
 ---
 # R and Landscape Ecology
 
-
-- Foundataions
+.left-column[
+- Foundations
   - [`sp`](https://CRAN.R-project.org/package=sp) 
   - [`rgdal`](https://CRAN.R-project.org/package=rgdal)
   - [`raster`](https://CRAN.R-project.org/package=raster)
@@ -141,12 +141,18 @@ ggsave(plot = ggp, filename = "figure/r_lang.png", width = 8, height = 6, units 
 - The Future
   - [`sf`](https://CRAN.R-project.org/package=sf)
   - [`stars`](https://github.com/r-spatial/stars)
-- Speciality (Missing many!)
+<img src="figure/Rlogo.png" style="width: 100%; margin-top: 50px; margin-left: -50px;"></img>
+]
+
+.right-column[
+- Specialty (Missing many!)
   - [`landsat`](https://CRAN.R-project.org/package=landsat)
   - [`SDMtools`](https://CRAN.R-project.org/package=SDMTools)
   - [`nlmr`](https://CRAN.R-project.org/package=NLMR)
   - [`landscapetools`](https://CRAN.R-project.org/package=landscapetools)
 
+<img src="figure/LAND_Cover.jpg" style="width: 60%; margin-top: 10px; margin-left: 40px;"></img>
+]
 ---
 class: center, middle, inverse
 
@@ -219,7 +225,7 @@ class: center, middle, inverse
 
 .right-column[
 <!--![lm demo](figure/lakemorpho_demo.gif)-->
-<img src="figure/lakemorpho_demo.gif" style="margin-top: -50px; margin-left: -15px; max-width: 120%;"></img>
+<img src="figure/lakemorpho_demo.gif" style="margin-top: -30px; margin-left: -15px; max-width: 120%;"></img>
 ]
 ---
 
@@ -247,7 +253,7 @@ class: center, middle, inverse
 
 .right-column[
 <!--![elevatr](figure/elevatr_demo.gif)-->
-<img src="figure/elevatr_demo.gif" style="margin-top: -50px; margin-left: -15px; max-width: 120%;"></img>
+<img src="figure/elevatr_demo.gif" style="margin-top: -30px; margin-left: -15px; max-width: 120%;"></img>
 ]
 
 ---
@@ -267,7 +273,7 @@ class: center, middle, inverse
 
 .right-column[
 <!--![goatscape demo](figure/goatscape_logo.jpg)-->
-<img src="figure/goatscape_logo.jpg" style="margin-top: -90px; margin-left: -15px; max-width: 110%;"></img>
+<img src="figure/goatscape_logo.jpg" style="margin-top: -70px; margin-left: -15px; max-width: 110%;"></img>
 ]
 
 .footnote[
@@ -279,7 +285,6 @@ Repository URL: <https://github.com/usepa/goatscape>
 # Thanks!
 .left-column[
 .center[
-</br>
 **Jeff Hollister**</br>
 US EPA </br>
 Atlantic Ecology Division </br>

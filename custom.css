@@ -32,6 +32,7 @@
       }
       
       .right-column {
+        padding: 0;
         width: 55%;
         float: right;
         color: black;
