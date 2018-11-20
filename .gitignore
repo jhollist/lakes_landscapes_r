@@ -28,3 +28,4 @@ vignettes/*.pdf
 lakes_landscapes_r.Rproj
 phantomjs.exe
 le_fulltext.rda
+*.rda
